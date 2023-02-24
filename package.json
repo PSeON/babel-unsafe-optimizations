@@ -7,7 +7,8 @@
   "scripts": {
     "lint": "prettier --check .",
     "lintfix": "prettier --write .",
-    "test": "npm run test --workspaces"
+    "test": "npm run test --workspaces",
+    "coverage": "npm run coverage --workspaces"
   },
   "devDependencies": {
     "babel-plugin-tester": "^10.1.0",
