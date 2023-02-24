@@ -7,6 +7,11 @@
   ],
   "author": "Serhii Petkun <sergeypetkun@gmail.com>",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PSeON/babel-unsafe-optimizations.git",
+    "directory": "packages/babel-plugin-unsafe-optimizations-duplicated-globals"
+  },
   "type": "commonjs",
   "main": "index.js",
   "scripts": {

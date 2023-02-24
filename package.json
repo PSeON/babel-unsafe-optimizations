@@ -1,18 +1,8 @@
 {
   "name": "babel-unsafe-optimizations",
   "private": true,
-  "version": "0.0.1",
-  "description": "Unsafe optimizations to reduce code size",
-  "keywords": [],
-  "author": "Serhii Petkun <sergeypetkun@gmail.com>",
-  "license": "ISC",
   "workspaces": [
-    "packages/babel-preset-unsafe-optimizations",
-    "packages/babel-plugin-unsafe-optimizations-const-to-let",
-    "packages/babel-plugin-unsafe-optimizations-duplicated-globals",
-    "packages/babel-plugin-unsafe-optimizations-duplicated-null",
-    "packages/babel-plugin-unsafe-optimizations-duplicated-strings",
-    "packages/babel-plugin-unsafe-optimizations-normal-to-arrow"
+    "packages/*"
   ],
   "scripts": {
     "test": "npm run test --workspaces"
