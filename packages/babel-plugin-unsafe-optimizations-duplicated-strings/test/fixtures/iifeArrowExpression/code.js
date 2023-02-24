@@ -1,0 +1,1 @@
+(() => ['longString', 'longString', 'longString'])();

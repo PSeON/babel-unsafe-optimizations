@@ -1,0 +1,12 @@
+const a = module,
+  b = exports;
+a.exports.const1 = 1;
+a.exports.const2 = 2;
+a.exports.const3 = 3;
+a.exports.const4 = 4;
+a.exports.const5 = 5;
+b.const6 = 6;
+b.const7 = 7;
+b.const8 = 8;
+b.const9 = 9;
+b.const10 = 10;

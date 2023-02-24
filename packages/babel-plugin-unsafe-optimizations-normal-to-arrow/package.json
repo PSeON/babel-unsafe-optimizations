@@ -1,0 +1,18 @@
+{
+  "name": "babel-plugin-unsafe-optimizations-normal-to-arrow",
+  "version": "0.0.1",
+  "description": "This plugin transforms normal function declarations and expressions to arrow functions",
+  "keywords": [
+    "babel-plugin"
+  ],
+  "author": "Serhii Petkun <sergeypetkun@gmail.com>",
+  "license": "ISC",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "files": [
+    "index.js"
+  ]
+}

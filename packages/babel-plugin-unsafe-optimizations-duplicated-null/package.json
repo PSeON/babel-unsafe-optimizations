@@ -1,0 +1,18 @@
+{
+  "name": "babel-plugin-unsafe-optimizations-duplicated-null",
+  "version": "0.0.1",
+  "description": "This plugin transforms duplicated null literals to corresponding variables",
+  "keywords": [
+    "babel-plugin"
+  ],
+  "author": "Serhii Petkun <sergeypetkun@gmail.com>",
+  "license": "ISC",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "files": [
+    "index.js"
+  ]
+}
