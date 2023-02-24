@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-unsafe-optimizations",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "This preset applies all usafe optimizations",
   "keywords": [
     "babel-preset"
@@ -22,10 +22,10 @@
     "index.js"
   ],
   "dependencies": {
-    "babel-plugin-unsafe-optimizations-const-to-let": "^0.0.1",
-    "babel-plugin-unsafe-optimizations-duplicated-globals": "^0.0.1",
-    "babel-plugin-unsafe-optimizations-duplicated-null": "^0.0.1",
-    "babel-plugin-unsafe-optimizations-duplicated-strings": "^0.0.1",
-    "babel-plugin-unsafe-optimizations-normal-to-arrow": "^0.0.1"
+    "babel-plugin-unsafe-optimizations-const-to-let": "^1.0.0",
+    "babel-plugin-unsafe-optimizations-duplicated-globals": "^1.0.0",
+    "babel-plugin-unsafe-optimizations-duplicated-null": "^1.0.0",
+    "babel-plugin-unsafe-optimizations-duplicated-strings": "^1.0.0",
+    "babel-plugin-unsafe-optimizations-normal-to-arrow": "^1.0.0"
   }
 }

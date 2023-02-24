@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-unsafe-optimizations-duplicated-strings",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "This plugin transforms duplicated string literals to corresponding variables",
   "keywords": [
     "babel-plugin"
