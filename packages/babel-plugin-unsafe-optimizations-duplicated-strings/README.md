@@ -1,6 +1,6 @@
 # babel-plugin-unsafe-optimizations-duplicated-strings
 
-This plugin creates local variables to store the repeated strings.
+This plugin creates local variables to store repeated strings.
 
 For example:
 
