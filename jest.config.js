@@ -1,7 +1,5 @@
 module.exports = {
-  roots: [
-    'test/'
-  ],
+  roots: ['test/'],
   verbose: true,
   testEnvironment: 'node',
 };

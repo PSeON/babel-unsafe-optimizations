@@ -49,7 +49,8 @@ exports.default = function (babel) {
 
       FunctionExpression(path) {
         const canTransform =
-          getCanTransform(path) && (!path.node.id || !path.scope.bindings[path.node.id.name].referenced);
+          getCanTransform(path) &&
+          (!path.node.id || !path.scope.bindings[path.node.id.name].referenced);
         if (canTransform) {
           path.replaceWith(
             t.arrowFunctionExpression(path.node.params, path.node.body, path.node.async),
