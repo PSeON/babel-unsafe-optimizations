@@ -1,7 +1,7 @@
 {
   "name": "babel-preset-unsafe-optimizations",
   "version": "1.1.0",
-  "description": "This preset applies all usafe optimizations",
+  "description": "This preset applies all unsafe optimizations",
   "keywords": [
     "babel-preset"
   ],

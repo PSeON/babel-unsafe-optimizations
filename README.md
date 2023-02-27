@@ -1,4 +1,4 @@
-# Usafe optimizations babel pluings
+# Unsafe optimizations babel pluings
 
 This repo includes babel plugins which help minify JavaScript even more but with some minor
 restrictions.
