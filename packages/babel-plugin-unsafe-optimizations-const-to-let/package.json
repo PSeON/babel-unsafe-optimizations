@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-unsafe-optimizations-const-to-let",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This plugin transforms all \"const\" declarations to \"let\"",
   "keywords": [
     "babel-plugin"

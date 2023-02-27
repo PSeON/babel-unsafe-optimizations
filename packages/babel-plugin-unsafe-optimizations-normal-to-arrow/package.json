@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-unsafe-optimizations-normal-to-arrow",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This plugin transforms normal function declarations and expressions to arrow functions",
   "keywords": [
     "babel-plugin"
