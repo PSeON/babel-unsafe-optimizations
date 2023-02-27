@@ -20,3 +20,9 @@ const data = [n, n, n, n, n, n];
 ## Why is it unsafe?
 
 This one actually looks safe.
+
+## Configuration
+
+### target
+
+Selects JavaScript syntax version for the output code. Supported values are: `"es5"`, `"es6"`.

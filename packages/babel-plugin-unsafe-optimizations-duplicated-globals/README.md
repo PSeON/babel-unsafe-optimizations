@@ -31,3 +31,17 @@ It's **unsafe** because it assumes that values of global variables will not be c
 new value to a global variable will not get reflected in the app after this transform.
 
 This plugin can be used if you are sure that global variables are not going to be changed.
+
+## Configuration
+
+### target
+
+Selects JavaScript syntax version for the output code. Supported values are: `"es5"`, `"es6"`.
+
+### includeGlobal
+
+Array of strings, which specifies globals to transform, all other globals will be ignored.
+
+### excludeGlobal
+
+Array of strings, which specifiec global to ignore during transform.

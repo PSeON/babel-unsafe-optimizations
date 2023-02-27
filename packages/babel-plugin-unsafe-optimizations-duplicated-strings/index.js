@@ -1,9 +1,13 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
-exports.default = function (babel) {
+exports.default = function (babel, options) {
   const { types: t } = babel;
 
   const availableIdentifiers = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_';
+
+  const isES5 = options && options.target === 'es5';
+
+  const variableDeclarationType = isES5 ? 'var' : 'const';
 
   function indexToIdentifier(index) {
     let result = '';
@@ -191,13 +195,16 @@ exports.default = function (babel) {
           });
 
           if (declarations.length > 0) {
-            const declarationsStatement = t.VariableDeclaration('const', declarations);
+            const declarationsStatement = t.VariableDeclaration(
+              variableDeclarationType,
+              declarations,
+            );
             const index = path.node.body.findIndex(item => item.type !== 'ImportDeclaration');
             path.node.body.splice(index >= 0 ? index : 0, 0, declarationsStatement);
           }
         } else {
           replacements.forEach((identifier, str) => {
-            const declarationsStatement = t.VariableDeclaration('const', [
+            const declarationsStatement = t.VariableDeclaration(variableDeclarationType, [
               t.VariableDeclarator(t.Identifier(identifier), t.StringLiteral(str)),
             ]);
 

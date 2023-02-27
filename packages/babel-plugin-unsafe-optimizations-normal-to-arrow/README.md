@@ -37,4 +37,11 @@ const add3 = (a, b, c) => a + b + c,
 
 ## Why is it unsafe?
 
-This one actually looks safe.
+Function declarations are hoisted, but `const` declarations are not. We can use normal functions
+before they are declared, but trying to do the same with `const` will throw an error.
+
+This plugin can be used if you sure that you follow "don't use before decalaration" principle.
+
+## Configuration
+
+This plugin doesn't have any configuration options.

@@ -1,13 +1,25 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
-exports.default = function () {
-  return {
-    plugins: [
-      'module:babel-plugin-unsafe-optimizations-duplicated-globals',
-      'module:babel-plugin-unsafe-optimizations-duplicated-null',
-      'module:babel-plugin-unsafe-optimizations-duplicated-strings',
-      'module:babel-plugin-unsafe-optimizations-normal-to-arrow',
-      'module:babel-plugin-unsafe-optimizations-const-to-let',
-    ],
-  };
+exports.default = function (babel, options) {
+  const isES5 = options && options.target === 'es5';
+
+  if (isES5) {
+    return {
+      plugins: [
+        ['unsafe-optimizations-duplicated-globals', options],
+        ['unsafe-optimizations-duplicated-null', options],
+        ['unsafe-optimizations-duplicated-strings', options],
+      ],
+    };
+  } else {
+    return {
+      plugins: [
+        ['unsafe-optimizations-duplicated-globals', options],
+        ['unsafe-optimizations-duplicated-null', options],
+        ['unsafe-optimizations-duplicated-strings', options],
+        ['unsafe-optimizations-normal-to-arrow', options],
+        ['unsafe-optimizations-const-to-let', options],
+      ],
+    };
+  }
 };

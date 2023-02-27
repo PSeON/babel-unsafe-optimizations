@@ -5,6 +5,10 @@ exports.default = function (babel, options) {
 
   const availableIdentifiers = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_';
 
+  const isES5 = options && options.target === 'es5';
+
+  const variableDeclarationType = isES5 ? 'var' : 'const';
+
   function isGlobalAllowedToTransform(name) {
     if (options && options.excludeGlobal && options.excludeGlobal.includes(name)) {
       return false;
@@ -214,13 +218,16 @@ exports.default = function (babel, options) {
           });
 
           if (declarations.length > 0) {
-            const declarationsStatement = t.VariableDeclaration('const', declarations);
+            const declarationsStatement = t.VariableDeclaration(
+              variableDeclarationType,
+              declarations,
+            );
             const index = path.node.body.findIndex(item => item.type !== 'ImportDeclaration');
             path.node.body.splice(index >= 0 ? index : 0, 0, declarationsStatement);
           }
         } else {
           replacements.forEach((identifier, str) => {
-            const declarationsStatement = t.VariableDeclaration('const', [
+            const declarationsStatement = t.VariableDeclaration(variableDeclarationType, [
               t.VariableDeclarator(t.Identifier(identifier), t.Identifier(str)),
             ]);
 

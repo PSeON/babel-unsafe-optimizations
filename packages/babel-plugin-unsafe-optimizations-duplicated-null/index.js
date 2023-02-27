@@ -1,11 +1,15 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
-exports.default = function (babel) {
+exports.default = function (babel, options) {
   const { types: t } = babel;
 
   const topNonProgramScope = new Set();
 
   const availableIdentifiers = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_';
+
+  const isES5 = options && options.target === 'es5';
+
+  const variableDeclarationType = isES5 ? 'var' : 'const';
 
   function indexToIdentifier(index) {
     let result = '';
@@ -173,7 +177,7 @@ exports.default = function (babel) {
           },
         });
 
-        const declarationsStatement = t.VariableDeclaration('const', [
+        const declarationsStatement = t.VariableDeclaration(variableDeclarationType, [
           t.VariableDeclarator(t.Identifier(replacement), t.NullLiteral()),
         ]);
 

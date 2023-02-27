@@ -38,3 +38,7 @@ It's **unsafe** because assigning to "const" variables throws an error, and this
 thrown after this transform.
 
 This plugin can be used if you sure that you don't assign to "const" in your code.
+
+## Configuration
+
+This plugin doesn't have any configuration options.
