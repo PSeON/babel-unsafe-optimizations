@@ -10,6 +10,9 @@ exports.default = function (babel, options) {
   const variableDeclarationType = isES5 ? 'var' : 'const';
 
   function isGlobalAllowedToTransform(name) {
+    if (name === 'arguments') {
+      return false;
+    }
     if (options && options.excludeGlobal && options.excludeGlobal.includes(name)) {
       return false;
     }
